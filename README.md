@@ -1,6 +1,6 @@
 # git-tags-remote
 [![GitHub issues](https://img.shields.io/npm/v/git-tags-remote.svg)](https://www.npmjs.com/package/git-tags-remote) [![Build Status](https://travis-ci.org/sh0ji/git-tags-remote.svg?branch=master)](https://travis-ci.org/sh0ji/git-tags-remote) [![dependencies Status](https://david-dm.org/sh0ji/git-tags-remote/status.svg)](https://david-dm.org/sh0ji/git-tags-remote)
-> Get remote repository tags and parse them.
+> Get remote repository tags.
 
 Inspired by [remote-git-tags](https://github.com/sindresorhus/remote-git-tags) and [node-git-tags](https://github.com/bfricka/node-git-tags). Allows any type of remote repository, including repositories accessed through SSH or private repositories. If `git ls-remote --tags` works for you, so will this.
 
