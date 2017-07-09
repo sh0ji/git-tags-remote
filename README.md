@@ -10,7 +10,7 @@ $ npm install --save git-tags-remote
 
 ## Usage
 ```javascript
-const gitTagsRemote = require('../git-tags-remote');
+const gitTagsRemote = require('git-tags-remote');
 
 gitTagsRemote.get('git@github.com:sh0ji/focus-rover.git')
     .then(tags => console.log(tags));
