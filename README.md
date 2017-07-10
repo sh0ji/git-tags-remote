@@ -26,5 +26,5 @@ Returns a `Promise<Map>` with the Git tags as keys and their commit SHA as value
       e.g. `'https://github.com/sh0ji/git-tags-remote.git'` is valid but `'github.com/sh0ji/git-tags-remote'` is not.
 
 `.latest(gitUrl)`  
-Returns an `Array` with the latest git tag and commit SHA value.  
+Returns a `Promise<Array>` with the latest git tag and commit SHA value.  
     e.g. `['v1.0.0-rc.2', '8e048a0fd9cb668366eef550be445ac761efd667']`
