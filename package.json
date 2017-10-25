@@ -1,6 +1,6 @@
 {
   "name": "git-tags-remote",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Get remote repository tags.",
   "main": "index.js",
   "scripts": {
