@@ -24,13 +24,13 @@ const parseTags = (tags) => {
 const get = (repo) => new Promise((resolve, reject) => {
 	lsRemoteTags(repo)
 		.then((tags) => resolve(parseTags(tags)))
-		.catch((err) => reject(err));
+		.catch(reject);
 });
 
 const latest = (repo) => new Promise((resolve, reject) => {
 	get(repo)
 		.then((tags) => resolve(tags.entries().next().value))
-		.catch((err) => reject(err));
+		.catch(reject);
 });
 
 module.exports = {
