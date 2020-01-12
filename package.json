@@ -4,8 +4,8 @@
   "description": "Get remote repository tags.",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint .",
     "prepublishOnly": "npm test",
-    "pretest": "eslint . --fix",
     "test": "ava"
   },
   "repository": {
