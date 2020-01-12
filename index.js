@@ -1,7 +1,7 @@
 const semver = require('semver');
 const { exec } = require('child_process');
 
-const lsRemoteTags = repo => new Promise((resolve, reject) => {
+const lsRemoteTags = (repo) => new Promise((resolve, reject) => {
 	exec(`git ls-remote --tags ${repo}`, (error, stdout, stderr) => {
 		if (stderr) reject(stderr);
 		resolve(stdout.toString().trim());
@@ -16,21 +16,21 @@ const parseTags = (tags) => {
 			tagMap.set(ref[1].split('/')[2].replace(/\^\{\}$/, ''), ref[0]);
 		});
 	return new Map([...tagMap.entries()]
-		.filter(arr => semver.valid(arr[0]))
+		.filter((arr) => semver.valid(arr[0]))
 		.sort((a, b) => semver.compare(a[0], b[0]))
 		.reverse());
 };
 
-const get = repo => new Promise((resolve, reject) => {
+const get = (repo) => new Promise((resolve, reject) => {
 	lsRemoteTags(repo)
-		.then(tags => resolve(parseTags(tags)))
-		.catch(err => reject(err));
+		.then((tags) => resolve(parseTags(tags)))
+		.catch((err) => reject(err));
 });
 
-const latest = repo => new Promise((resolve, reject) => {
+const latest = (repo) => new Promise((resolve, reject) => {
 	get(repo)
-		.then(tags => resolve(tags.entries().next().value))
-		.catch(err => reject(err));
+		.then((tags) => resolve(tags.entries().next().value))
+		.catch((err) => reject(err));
 });
 
 module.exports = {

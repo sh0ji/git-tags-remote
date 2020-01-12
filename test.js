@@ -33,9 +33,9 @@ test('invalid url', async (t) => {
 	const error = await t.throws(gtr.get(invalid));
 	t.is(
 		error,
-		`fatal: '${invalid}' does not appear to be a git repository\n` +
-		'fatal: Could not read from remote repository.\n\n' +
-		'Please make sure you have the correct access rights\n' +
-		'and the repository exists.\n'
+		`fatal: '${invalid}' does not appear to be a git repository\n`
+		+ 'fatal: Could not read from remote repository.\n\n'
+		+ 'Please make sure you have the correct access rights\n'
+		+ 'and the repository exists.\n',
 	);
 });
