@@ -15,10 +15,12 @@ const parseTags = (tags) => {
 			const ref = str.split(/\t/);
 			tagMap.set(ref[1].split('/')[2].replace(/\^\{\}$/, ''), ref[0]);
 		});
-	return new Map([...tagMap.entries()]
-		.filter((arr) => semver.valid(arr[0]))
-		.sort((a, b) => semver.compare(a[0], b[0]))
-		.reverse());
+	return new Map(
+		[...tagMap.entries()]
+			.filter((arr) => semver.valid(arr[0]))
+			.sort((a, b) => semver.compare(a[0], b[0]))
+			.reverse(),
+	);
 };
 
 const get = (repo) => new Promise((resolve, reject) => {
