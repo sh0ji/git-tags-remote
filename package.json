@@ -25,7 +25,7 @@
     "test": "nyc ava"
   },
   "dependencies": {
-    "semver": "^5.4.1"
+    "semver": "^7.3.2"
   },
   "devDependencies": {
     "ava": "^2.4.0",
