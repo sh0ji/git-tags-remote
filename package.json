@@ -1,6 +1,6 @@
 {
   "name": "git-tags-remote",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Get remote repository tags.",
   "keywords": [
     "git",
