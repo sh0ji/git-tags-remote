@@ -21,10 +21,10 @@ gitTagsRemote.get('git@github.com:sh0ji/focus-rover.git')
 
 ## API
 `.get(gitUrl)`  
-Returns a `Promise<Map>` with the Git tags as keys and their commit SHA as values, just like [remote-git-tags](https://github.com/sindresorhus/remote-git-tags).  
+Returns a `Promise<Map<string, string>>` with the Git tags as keys and their commit SHA as values, just like [remote-git-tags](https://github.com/sindresorhus/remote-git-tags).  
  * `gitUrl` must be a [valid git url](https://git-scm.com/docs/git-clone#_git_urls_a_id_urls_a).  
       e.g. `'https://github.com/sh0ji/git-tags-remote.git'` is valid but `'github.com/sh0ji/git-tags-remote'` is not.
 
 `.latest(gitUrl)`  
-Returns a `Promise<Array>` with the latest git tag and commit SHA value.  
+Returns a promised tuple (`Promise<[string, string]>`) with the latest git tag and commit SHA value. 
     e.g. `['v1.0.0-rc.2', '8e048a0fd9cb668366eef550be445ac761efd667']`
