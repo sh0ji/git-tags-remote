@@ -28,10 +28,11 @@
     "semver": "^5.4.1"
   },
   "devDependencies": {
-    "ava": "^2.4.0",
+    "ava": "^3.11.1",
     "eslint": "^7.6.0",
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-plugin-import": "^2.22.0",
     "nyc": "^15.1.0",
+    "standard-version": "^8.0.2"
   }
 }
