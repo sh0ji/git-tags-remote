@@ -1,8 +1,8 @@
 const semver = require('semver');
-const { exec } = require('child_process');
+const { execFile } = require('child_process');
 
 const lsRemoteTags = (repo) => new Promise((resolve, reject) => {
-	exec(`git ls-remote --tags ${repo}`, (error, stdout, stderr) => {
+	execFile(`git`, [`ls-remote`, `--tags`, `${repo}`], (error, stdout, stderr) => {
 		if (stderr) reject(new Error(stderr));
 		resolve(stdout.toString().trim());
 	});
