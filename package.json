@@ -24,6 +24,11 @@
     "release": "standard-version -sa",
     "test": "nyc ava"
   },
+  "ava": {
+    "require": [
+      "esm"
+    ]
+  },
   "dependencies": {
     "semver": "^7.3.2"
   },
@@ -34,6 +39,7 @@
     "eslint": "^7.6.0",
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-plugin-import": "^2.22.0",
+    "esm": "^3.2.25",
     "nyc": "^15.1.0",
     "standard-version": "^8.0.2"
   }
