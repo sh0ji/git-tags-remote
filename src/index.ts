@@ -30,9 +30,9 @@ export const get = async (repo: string): Promise<Map<string, string>> => {
 	return parseTags(tags);
 };
 
-export const latest = async (repo: string): Promise<Map<string, string>> => {
+export const latest = async (repo: string): Promise<[string, string]> => {
 	const tags = await get(repo);
-	return tags.entries().next().value;
+	return tags.entries().next().value as [string, string];
 };
 
 module.exports = { get, latest };
