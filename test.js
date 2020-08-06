@@ -6,14 +6,14 @@ const invalid = 'github.com/sh0ji/focus-rover';
 
 test('public https get', async (t) => {
 	const tags = await gtr.get(https);
-	t.is(tags.get('v1.0.0'), '912af5c2734756b2fa2973a909134775b99c2f7c');
+	t.is(tags.get('v1.0.0'), '100b2a539ae13406d70a2062bde8d6e4e329fa87');
 	t.is(tags.get('v2.0.0'), '7480367b30525107d89aac5ae08cfec991a4e933');
 });
 
 test('public https latest', async (t) => {
 	const latest = await gtr.latest(https);
-	t.is(latest[0], 'v2.0.1');
-	t.is(latest[1], '0b08ebd3a456f12136cfd599401d796c489e82e6');
+	t.is(latest[0], 'v2.0.3');
+	t.is(latest[1], 'db0cf6c95dab4c4f9f88d6553ee19fcba3b3b5b9');
 });
 
 test('invalid url', async (t) => {
