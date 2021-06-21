@@ -1,17 +1,30 @@
 import { valid, compare } from 'semver';
-import { exec } from 'child_process';
+import { spawn } from 'child_process';
 
-const lsRemoteTags = (repo: string): Promise<string> => new Promise(
-	(resolve, reject) => {
-		exec(`git ls-remote --tags ${repo}`, (_, stdout, stderr) => {
-			if (stderr) reject(new Error(stderr));
-			resolve(stdout.toString().trim());
-		});
-	},
-);
+const lsRemoteTags = (repoPath: string): Promise<string> => new Promise((resolve, reject) => {
+	let stderr = '';
+	let stdout = '';
+
+	const child = spawn('git', ['ls-remote', '--tags', repoPath]);
+
+	child.stdout.on('data', (data) => {
+		stdout += data;
+	});
+
+	child.stderr.on('data', (data) => {
+		stderr += data;
+	});
+
+	child.on('error', reject);
+
+	child.on('close', (exitCode) => {
+		if (exitCode !== 0 || stderr.length) reject(new Error(stderr));
+		resolve(stdout.toString().trim());
+	});
+});
 
 const parseTags = (tags: string): Map<string, string> => {
-	const tagMap = new Map();
+	const tagMap = new Map<string, string>();
 	tags.split('\n')
 		.forEach((str) => {
 			const ref = str.split(/\t/);
