@@ -2,7 +2,8 @@
 	"compilerOptions": {
 		"declaration": true,
 		"declarationMap": true,
-		"module": "CommonJS",
+		"module": "ESNext",
+		"moduleResolution": "node",
 		"outDir": "./dist",
 		"rootDir": "./src",
 		"strict": true,
