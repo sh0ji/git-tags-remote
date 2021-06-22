@@ -2,6 +2,9 @@ module.exports = {
 	extends: [
 		'airbnb-base',
 	],
+	parserOptions: {
+		project: './tsconfig.json',
+	},
 	rules: {
 		indent: ['error', 'tab'],
 		'no-tabs': 0,
@@ -12,6 +15,7 @@ module.exports = {
 			extends: [
 				'plugin:import/typescript',
 				'plugin:@typescript-eslint/recommended',
+				'plugin:@typescript-eslint/recommended-requiring-type-checking',
 			],
 			rules: {
 				indent: 'off',
