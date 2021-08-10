@@ -12,8 +12,8 @@ test('public https get', async (t) => {
 
 test('public https latest', async (t) => {
 	const latest = await gtr.latest(https);
-	t.is(latest[0], 'v2.0.3');
-	t.is(latest[1], 'db0cf6c95dab4c4f9f88d6553ee19fcba3b3b5b9');
+	t.is(latest[0], 'v2.0.4');
+	t.is(latest[1], '3b73969ca3a02047e2925d7bbe834da947a272e1');
 });
 
 test('invalid url', async (t) => {
