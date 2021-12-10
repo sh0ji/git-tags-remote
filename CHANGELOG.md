@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.5](https://github.com/sh0ji/git-tags-remote/compare/v1.0.4...v1.0.5) (2021-12-10)
+
+
+### Bug Fixes
+
+* use default export ([ba94e0c](https://github.com/sh0ji/git-tags-remote/commit/ba94e0c28a6c9afe65a0570f4c9a63c25a11ead3))
+
 ### [1.0.4](https://github.com/sh0ji/git-tags-remote/compare/v1.0.3...v1.0.4) (2021-06-22)
 
 
