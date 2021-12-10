@@ -48,4 +48,4 @@ export const latest = async (repo: string): Promise<[string, string]> => {
 	return tags.entries().next().value as [string, string];
 };
 
-module.exports = { get, latest };
+export default { get, latest };
