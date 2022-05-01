@@ -26,7 +26,7 @@ jobs:
     - name: Test 🧪
       run: npm run coverage
     - name: Codecov ☂
-      uses: codecov/codecov-action@v1
+      uses: codecov/codecov-action@v3
       with:
         directory: coverage
 
